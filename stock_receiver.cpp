@@ -48,6 +48,7 @@ void analyzeStock(const StockData& stock, const PortfolioEntry& entry) {
    { 
       std::lock_guard<std::mutex> lock(logMutex);
       // critical section
+      // TODO: Fix the logic
       std::cout << "\nStock: " << ticker << " (You own " << entry.quantity << " shares)\n";
       std::cout << "  Price:       " << price << "\n";
       std::cout << "  52W High:    " << high << "\n";
